@@ -32,7 +32,9 @@ function Navbar() {
                 fontSize="small"
                 className={styles.arrowIcon}
               />
-              {pathname.split("/")[2]}
+              {pathname.split("/")[2].includes("-")
+                ? pathname.split("/")[2].split("-").join(" ")
+                : ""}
             </Box>
           ) : (
             ""

@@ -34,7 +34,7 @@ function Navbar() {
               />
               {pathname.split("/")[2].includes("-")
                 ? pathname.split("/")[2].split("-").join(" ")
-                : ""}
+                : pathname.split("/")[2]}
             </Box>
           ) : (
             ""

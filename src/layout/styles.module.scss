@@ -1,0 +1,11 @@
+@import "../assets/styles/variables.scss";
+
+.mainContainer {
+  background: $light-gray;
+  min-height: 100vh;
+  height: 100%;
+  padding-inline: 33px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

@@ -1,0 +1,48 @@
+@import "../../assets/styles/variables.scss";
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full height */
+  &_logo {
+    padding: 50px 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &_tabs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &_tab {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 30px;
+      border-left: 3px solid transparent;
+      &.activeTab {
+        border-color: $primary-color-dark;
+      }
+      &_icon {
+        path {
+          fill: #00000040;
+        }
+        &.activeTab {
+          path {
+            fill: $primary-color-dark;
+          }
+        }
+      }
+      p {
+        font-weight: 400 !important;
+        font-size: 16px !important;
+      }
+    }
+  }
+}

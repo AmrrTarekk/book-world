@@ -9,6 +9,7 @@ import HeaderBox from "./HeaderBox";
 import useFetchData from "../../hooks/useFetchData";
 import AddNewBookPopup from "./AddNewBookPopup";
 import BookRow from "./BookRow";
+import { books } from "../Home/components/BooksSlider/type";
 function Books() {
   const [open, setOpen] = useState(false);
   const handlePopup = () => setOpen(!open);

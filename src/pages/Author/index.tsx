@@ -9,6 +9,7 @@ import AddNewAuthorPopup from "./AddNewAuthorPopup";
 import HeaderBox from "./HeaderBox";
 import useFetchData from "../../hooks/useFetchData";
 import AuthorRow from "./AuthorRow";
+import { author } from "../Home/components/AuhtorsSlider/type";
 function Author() {
   const [open, setOpen] = useState(false);
   const handlePopup = () => setOpen(!open);

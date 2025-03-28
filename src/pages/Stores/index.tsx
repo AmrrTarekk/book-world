@@ -9,6 +9,7 @@ import HeaderBox from "./HeaderBox";
 import useFetchData from "../../hooks/useFetchData";
 import AddNewStorePopup from "./AddNewStorePopup";
 import StoreRow from "./StoreRow";
+import { stores } from "../Home/components/StoresSlider/type";
 function Stores() {
   const [open, setOpen] = useState(false);
   const handlePopup = () => setOpen(!open);

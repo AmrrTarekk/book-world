@@ -11,6 +11,9 @@ import Button from "../../components/Button";
 import { useFormik } from "formik";
 import useFetchData from "../../hooks/useFetchData";
 import { useState } from "react";
+import { author } from "../Home/components/AuhtorsSlider/type";
+import { books } from "../Home/components/BooksSlider/type";
+import { bookInventory } from "./type";
 
 type Props = {
   open: boolean;

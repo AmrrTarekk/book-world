@@ -4,6 +4,8 @@ import HelmetContainer from "../../HOC/Helmet";
 import useFetchData from "../../hooks/useFetchData";
 import BookCard from "../../components/Cards/BookCard";
 import SearchBar from "../Home/components/SearchBar";
+import { author } from "../Home/components/AuhtorsSlider/type";
+import { books } from "../Home/components/BooksSlider/type";
 
 function ShopBooks() {
   const { data: books, loading: loadingBooks } =

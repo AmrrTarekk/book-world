@@ -3,6 +3,7 @@ import Popup from "../../components/Popup";
 import { Box, Typography } from "@mui/material";
 import Button from "../../components/Button";
 import { useFormik } from "formik";
+import { stores } from "../Home/components/StoresSlider/type";
 
 type Props = {
   open: boolean;

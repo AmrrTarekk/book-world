@@ -1,4 +1,4 @@
-type bookInventory = {
+export type bookInventory = {
   id: number;
   author_id: number;
   author_name: string;

@@ -4,6 +4,7 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { stores } from "../Home/components/StoresSlider/type";
 
 type Props = {
   store: {

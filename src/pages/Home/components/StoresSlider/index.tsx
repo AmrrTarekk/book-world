@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "../../../../../node_modules/swiper/swiper.css";
 import { Link } from "react-router-dom";
 import StoreCard from "../../../../components/Cards/StoreCard";
+import { stores } from "./type";
 
 // import "swiper/css";
 function StoresSlider() {

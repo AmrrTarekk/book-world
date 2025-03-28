@@ -1,4 +1,4 @@
-type stores = {
+export type stores = {
   id: number;
   name: string;
   address_1: string;

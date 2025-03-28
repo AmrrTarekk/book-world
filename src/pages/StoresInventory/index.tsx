@@ -9,6 +9,7 @@ import HeaderBox from "./HeaderBox";
 import AddToInventoryPopup from "./AddToInventoryPopup";
 import StoreInventoryRow from "./StoreInventoryRow";
 import AuthorsGrouped from "./AuthorsGrouped";
+import { bookInventory } from "./type";
 function StoresInventory() {
   const [open, setOpen] = useState(false);
   const handlePopup = () => setOpen(!open);

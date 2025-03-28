@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import { useState } from "react";
+import { bookInventory } from "./type";
 
 type Props = {
   book: bookInventory;

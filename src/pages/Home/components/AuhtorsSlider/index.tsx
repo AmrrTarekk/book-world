@@ -7,6 +7,7 @@ import "../../../../../node_modules/swiper/swiper.css";
 // import StoreCard from "./StoreCard";
 import { Link } from "react-router-dom";
 import AuhtorCard from "../../../../components/Cards/AuthorCard";
+import { author } from "./type";
 
 function AuthorsSlides() {
   const { data } = useFetchData<author>(`/authors.json`);

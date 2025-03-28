@@ -3,7 +3,6 @@ import useFetchData from "../../../../hooks/useFetchData";
 import styles from "./styles.module.scss";
 import Button from "../../../../components/Button";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "../../../../../node_modules/swiper/swiper.css";
 import { Link } from "react-router-dom";
 import StoreCard from "../../../../components/Cards/StoreCard";
 import { stores } from "./type";

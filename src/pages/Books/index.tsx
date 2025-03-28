@@ -52,7 +52,7 @@ function Books() {
               <Box className={styles.books_bookContainer}>
                 <HeaderBox />
                 <Divider />
-                {books.map((book, index) => (
+                {books?.map((book, index) => (
                   <Fragment key={book.id}>
                     <BookRow book={book} setBooks={setBooks} />
                     {index !== books.length - 1 && <Divider />}

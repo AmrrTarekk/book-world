@@ -1,6 +1,6 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ErrorPage from "./pages/NotFound/NotFound";
+import { Routes, Route } from "react-router-dom";
 import { lazy, Suspense, useEffect } from "react";
+import ErrorPage from "./pages/NotFound/NotFound";
 import MainLayout from "./layout/MainLayout";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -10,85 +10,75 @@ const Books = lazy(() => import("./pages/Books"));
 const Stores = lazy(() => import("./pages/Stores"));
 const StoreInventory = lazy(() => import("./pages/StoresInventory"));
 
-function App() {
+function SecondAppRoutes() {
   useEffect(() => {
     document
       .getElementsByTagName("html")[0]
       .setAttribute("lang", localStorage?.getItem("lang") || "en");
   }, []);
 
-  const router = createBrowserRouter([
-    {
-      path: `/`,
-      element: <MainLayout />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-          path: `/`,
-          element: (
+  return (
+    <Routes>
+      <Route path="/" element={<MainLayout />} errorElement={<ErrorPage />}>
+        <Route
+          index
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <Home />
             </Suspense>
-          ),
-        },
-        {
-          path: `/shop`,
-          element: (
+          }
+        />
+        <Route
+          path="shop"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <Home />
             </Suspense>
-          ),
-        },
-
-        {
-          path: `/stores`,
-          element: (
+          }
+        />
+        <Route
+          path="stores"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <Stores />
             </Suspense>
-          ),
-        },
-        {
-          path: `/author`,
-          element: (
+          }
+        />
+        <Route
+          path="author"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <Author />
             </Suspense>
-          ),
-        },
-        {
-          path: `/books`,
-          element: (
+          }
+        />
+        <Route
+          path="books"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <Books />
             </Suspense>
-          ),
-        },
-        {
-          path: `/shop/books`,
-          element: (
+          }
+        />
+        <Route
+          path="shop/books"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <ShopBooks />
             </Suspense>
-          ),
-        },
-        {
-          path: `/stores/cover-discovery`,
-          element: (
+          }
+        />
+        <Route
+          path="stores/cover-discovery"
+          element={
             <Suspense fallback={<div>Loading...</div>}>
               <StoreInventory />
             </Suspense>
-          ),
-        },
-      ],
-    },
-  ]);
-
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
+          }
+        />
+      </Route>
+    </Routes>
   );
 }
 
-export default App;
+export default SecondAppRoutes;

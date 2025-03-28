@@ -30,7 +30,7 @@ function ShopBooks() {
           <Typography>Loading...</Typography>
         ) : (
           <Grid container spacing={2}>
-            {books.map((book) => (
+            {books?.map((book) => (
               <Grid key={book.id} item xs={4}>
                 <BookCard pickAnAuther={pickAnAuther} book={book} />
               </Grid>

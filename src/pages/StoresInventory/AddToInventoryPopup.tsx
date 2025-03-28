@@ -114,7 +114,7 @@ function AddToInventoryPopup({ handlePopup, open, setStoreInventory }: Props) {
               <MenuItem disabled value="">
                 Select Book
               </MenuItem>
-              {books.map((book) => (
+              {books?.map((book) => (
                 <MenuItem key={book.id} value={`${book.id}`}>
                   {book.name}
                 </MenuItem>

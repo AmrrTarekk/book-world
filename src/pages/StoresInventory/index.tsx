@@ -87,7 +87,7 @@ function StoresInventory() {
             <Divider />
             {viewTab === "books" ? (
               storeInventory.books.length ? (
-                storeInventory.books.map((book, index) => (
+                storeInventory.books?.map((book, index) => (
                   <Fragment key={book.id}>
                     <StoreInventoryRow
                       book={book}
@@ -102,7 +102,7 @@ function StoresInventory() {
                 </Typography>
               )
             ) : storeInventory.books.length ? (
-              storeInventory.books.map((book, index) => (
+              storeInventory.books?.map((book, index) => (
                 <Fragment key={book.id}>
                   <AuthorsGrouped
                     book={book}

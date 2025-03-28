@@ -28,7 +28,7 @@ function StoresSlider() {
         </Link>
       </Box>
       <Swiper slidesPerView={3.05} spaceBetween={10} style={{ width: "100%" }}>
-        {stores.map((store) => (
+        {stores?.map((store) => (
           <SwiperSlide key={store.id}>
             <StoreCard store={store} />
           </SwiperSlide>

@@ -44,7 +44,7 @@ function Stores() {
           <Box className={styles.stores_storeContainer}>
             <HeaderBox />
             <Divider />
-            {stores.map((store, index) => (
+            {stores?.map((store, index) => (
               <Fragment key={store.id}>
                 <StoreRow store={store} setStores={setStores} />
                 {index !== stores.length - 1 && <Divider />}

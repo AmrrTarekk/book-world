@@ -32,7 +32,7 @@ function BooksSlider() {
         </Link>
       </Box>
       <Swiper slidesPerView={3.05} spaceBetween={10} style={{ width: "100%" }}>
-        {books.map((book) => (
+        {books?.map((book) => (
           <SwiperSlide key={book.id}>
             <BookCard pickAnAuther={pickAnAuther} book={book} />
           </SwiperSlide>
